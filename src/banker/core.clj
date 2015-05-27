@@ -5,7 +5,7 @@
 (defn read-file [file-name]
   (with-open [rdr (reader file-name)]
     (doseq [line (line-seq rdr)]
-      (println line))))
+      (str line))))
 
 (defn test-read-file [file-name]
-  (with-open [rdr (reader file-name)]))
+  (slurp file-name))
